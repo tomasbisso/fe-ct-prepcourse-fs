@@ -17,7 +17,7 @@ function mayoriaDeEdad(edad) {
    if (edad >= 18){
       return 'Allowed';
    } else {
-      return 'Not Allowed';
+      return 'Not allowed';
    }
 }
 mayoriaDeEdad (19)
@@ -51,18 +51,15 @@ function saludo(idioma) {
    // Tu código:
    switch (idioma) {
       case 'aleman':
-           console.log ('Guten Tag!');
-         break;
+           return 'Guten Tag!';
       
       case 'mandarin':
-            console.log ('Ni Hao!');
-         break;
+            return 'Ni Hao!';
 
       case 'ingles':
-            console.log ('Hello!');
-         break;
+           return 'Hello!';
             default:
-            console.log ('Hola!');
+            return 'Hola!';
    }
 }
 
@@ -78,23 +75,19 @@ function colors(color) {
 
    switch (color) {
       case 'blue':
-         console.log ('This is blue');
-         break;
+         return 'This is blue';
 
       case 'red':
-         console.log ('This is red');
-         break;
+         return 'This is red';
 
       case 'green':
-         console.log ('This is green');
-         break;
+         return 'This is green';
 
       case 'orange':
-         console.log ('This is orange');
-         break;
+         return 'This is orange';
 
             default:
-            console.log ('Color not found');
+            return 'Color not found';
    }
 }
 
@@ -131,9 +124,9 @@ function esEntero(num) {
    // De lo contrario, retorna false.
    // Tu código:
    if (num % 1 == 0) {
-      return 'Es entero';
+      return true;
    } else {
-      return 'Es decimal';
+      return false;
    }
 }
 
@@ -151,7 +144,9 @@ function fizzBuzz(num) {
       return 'fizz';
    } else if (num % 5 == 0) {
       return 'buzz';
-   }
+   } else if (num % 5 != 0 || num % 3 != 0){
+      return false;
+   } 
 }
 
 
@@ -170,6 +165,8 @@ function operadoresLogicos(num1, num2, num3) {
    } else if (num3 > num1 && num3 > num2 ) {
       num3 = num3 + 1;
       return num3;
+   } else if (num1 == 0 && num2 == 0 && num3 == 0) {
+      return 'Error'
    } else {
       return false;
    }
@@ -184,10 +181,6 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
 
-   if (num <= 1) {
-      return 'Estos números no son válidos';
-   }
-
    for (let i = 2; i < num; i++) {
       if (num % i == 0) {
          return false;
@@ -196,6 +189,8 @@ function esPrimo(num) {
       }
    } 
 }
+
+esPrimo (8)
 
 
 function esVerdadero(valor) {

@@ -32,7 +32,7 @@ function menosQueNoventa(num) {
    // Tu código:
 
    if (num < 90) {
-      return 'Es menor que noventa'
+      return true;
    } else {
       return false;
    }
@@ -43,7 +43,7 @@ function mayorQueCincuenta(num) {
    // De lo contrario, retorna false.
    // Tu código:
    if (num > 50) {
-      return 'Es meayor que cincuenta'
+      return true;
    } else {
       return false;
    }
@@ -55,7 +55,7 @@ function esPar(num) {
    // Tu código:
 
    if (num % 2 == 0) {
-      return 'Es par'
+      return true;
    }  else {
       return false;
    }
@@ -67,7 +67,7 @@ function esImpar(num) {
    // Tu código:
 
    if (num % 2 != 0) {
-      return 'Es impar'
+      return true;
    } else {
       return false;
    }
